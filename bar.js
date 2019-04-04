@@ -33,12 +33,12 @@
     //Slider
     ctx.beginPath();
     if (direction[1] === 1) {
-      ctx.moveTo(x + this.widthL, y - 2);
-      ctx.lineTo(x + this.widthL, y + (height + 2));
+      ctx.moveTo(x + this.widthL, y);
+      ctx.lineTo(x + this.widthL, y + height);
     }
     else {
       ctx.moveTo(x, y + this.widthL);
-      ctx.lineTo(x + (height + 2), y + this.widthL);
+      ctx.lineTo(x + height, y + this.widthL);
     }
     ctx.strokeStyle = '#0e2f44';
     ctx.stroke();
@@ -48,10 +48,10 @@
     var widthR = sr * GR.bLength;
     ctx.fillStyle = 'rgba(10, 10, 100, 0.5)';
     if (direction[1] === 1) {
-       ctx.fillRect(x + (this.widthL + 1), y, widthR, height);
+       ctx.fillRect(x + (this.widthL), y, widthR, height);
     }
     else {
-       ctx.fillRect(x , y + (this.widthL + 1), height, widthR);
+       ctx.fillRect(x , y + (this.widthL), height, widthR);
     }
   }
 

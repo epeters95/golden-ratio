@@ -13,7 +13,11 @@
   }
 
   Slider.prototype.getRatio = function() {
-  	return this.leftWidth / (this.length - this.leftWidth);
+  	return this.leftWidth / (this.length - Math.abs(this.leftWidth));
+  }
+
+  Slider.prototype.getRatio2 = function() {
+    return this.length / (this.length - Math.abs(this.leftWidth));
   }
 
 }(this));
